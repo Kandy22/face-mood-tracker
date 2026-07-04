@@ -1,0 +1,8 @@
+{
+  "name": "Face Mood Tracker",
+  "description": "Tracks facial expression features via webcam to determine your mood, displays a constant matching mood light, and plays a song that fits your vibe.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

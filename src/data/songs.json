@@ -1,0 +1,402 @@
+[
+  {
+    "track": "Girls Just Want to Have Fun",
+    "artist": "Cyndi Lauper",
+    "mood": "Joy / Freedom",
+    "primaryMood": "Happy",
+    "colors": ["#FF69B4", "#FFFF00"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Cyndi+Lauper+Girls+Just+Want+to+Have+Fun"
+  },
+  {
+    "track": "Landslide",
+    "artist": "Fleetwood Mac",
+    "mood": "Nostalgia / Vulnerability",
+    "primaryMood": "Sad",
+    "colors": ["#556B2F", "#8B4513"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Fleetwood+Mac+Landslide"
+  },
+  {
+    "track": "Joy to the World",
+    "artist": "Three Dog Night",
+    "mood": "Communal Joy",
+    "primaryMood": "Happy",
+    "colors": ["#FFA500", "#FFD700"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Three+Dog+Night+Joy+to+the+World"
+  },
+  {
+    "track": "Happy",
+    "artist": "Pharrell Williams",
+    "mood": "Optimism / Celebration",
+    "primaryMood": "Happy",
+    "colors": ["#FFFF00", "#87CEEB"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Pharrell+Williams+Happy"
+  },
+  {
+    "track": "Welcome to the Jungle",
+    "artist": "Guns N’ Roses",
+    "mood": "Adrenaline / Fear",
+    "primaryMood": "Anxious",
+    "colors": ["#FF0000", "#000000"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Guns+N+Roses+Welcome+to+the+Jungle"
+  },
+  {
+    "track": "Enter Sandman",
+    "artist": "Metallica",
+    "mood": "Fear / Unease",
+    "primaryMood": "Anxious",
+    "colors": ["#000000", "#708090"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Metallica+Enter+Sandman"
+  },
+  {
+    "track": "Another One Bites the Dust",
+    "artist": "Queen",
+    "mood": "Power / Confidence",
+    "primaryMood": "Neutral",
+    "colors": ["#800080", "#8B0000"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Queen+Another+One+Bites+the+Dust"
+  },
+  {
+    "track": "We Are the Champions",
+    "artist": "Queen",
+    "mood": "Victory / Pride",
+    "primaryMood": "Happy",
+    "colors": ["#FFD700", "#FFFFFF"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Queen+We+Are+the+Champions"
+  },
+  {
+    "track": "I Will Survive",
+    "artist": "Gloria Gaynor",
+    "mood": "Empowerment",
+    "primaryMood": "Happy",
+    "colors": ["#800080", "#FF00FF"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Gloria+Gaynor+I+Will+Survive"
+  },
+  {
+    "track": "What a Wonderful World",
+    "artist": "Louis Armstrong",
+    "mood": "Hope / Serenity",
+    "primaryMood": "Calm",
+    "colors": ["#98FB98", "#FF8C00"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Louis+Armstrong+What+a+Wonderful+World"
+  },
+  {
+    "track": "Variations on the Kanon",
+    "artist": "George Winston",
+    "mood": "Calm / Reflection",
+    "primaryMood": "Calm",
+    "colors": ["#FFFFFF", "#C0C0C0"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=George+Winston+Variations+on+the+Kanon"
+  },
+  {
+    "track": "9 to 5",
+    "artist": "Dolly Parton",
+    "mood": "Motivation / Resilience",
+    "primaryMood": "Happy",
+    "colors": ["#FF0000", "#FFA500"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Dolly+Parton+9+to+5"
+  },
+  {
+    "track": "Numb",
+    "artist": "Linkin Park",
+    "mood": "Anguish",
+    "primaryMood": "Sad",
+    "colors": ["#808080", "#2F4F4F"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Linkin+Park+Numb"
+  },
+  {
+    "track": "Move Along",
+    "artist": "All-American Rejects",
+    "mood": "Determination",
+    "primaryMood": "Excited",
+    "colors": ["#FF8C00", "#FF4500"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=All-American+Rejects+Move+Along"
+  },
+  {
+    "track": "Dirty Little Secret",
+    "artist": "All-American Rejects",
+    "mood": "Guilt/Mischief",
+    "primaryMood": "Anxious",
+    "colors": ["#4B0082", "#8B0000"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=All-American+Rejects+Dirty+Little+Secret"
+  },
+  {
+    "track": "Gives You Hell",
+    "artist": "All-American Rejects",
+    "mood": "Schadenfreude",
+    "primaryMood": "Angry",
+    "colors": ["#FF0000", "#FF00FF"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=All-American+Rejects+Gives+You+Hell"
+  },
+  {
+    "track": "Hands Clean",
+    "artist": "Alanis Morissette",
+    "mood": "Regret",
+    "primaryMood": "Sad",
+    "colors": ["#00008B", "#708090"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Alanis+Morissette+Hands+Clean"
+  },
+  {
+    "track": "The Reason",
+    "artist": "Hoobastank",
+    "mood": "Remorse/Hope",
+    "primaryMood": "Sad",
+    "colors": ["#ADD8E6", "#FFD700"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Hoobastank+The+Reason"
+  },
+  {
+    "track": "Outside",
+    "artist": "Staind",
+    "mood": "Loneliness/Longing",
+    "primaryMood": "Sad",
+    "colors": ["#4B0082", "#008080"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Staind+Outside"
+  },
+  {
+    "track": "A Little Bit Stronger",
+    "artist": "Sara Evans",
+    "mood": "Resilience",
+    "primaryMood": "Calm",
+    "colors": ["#FFB6C1", "#F5F5DC"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Sara+Evans+A+Little+Bit+Stronger"
+  },
+  {
+    "track": "Born To Fly",
+    "artist": "Sara Evans",
+    "mood": "Freedom/Hope",
+    "primaryMood": "Happy",
+    "colors": ["#87CEEB", "#FFFFFF"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Sara+Evans+Born+To+Fly"
+  },
+  {
+    "track": "How Do I Live",
+    "artist": "Michael Bolton",
+    "mood": "Longing",
+    "primaryMood": "Sad",
+    "colors": ["#C71585", "#8B0000"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Michael+Bolton+How+Do+I+Live"
+  },
+  {
+    "track": "Hero",
+    "artist": "Enrique Iglesias",
+    "mood": "Love/Devotion",
+    "primaryMood": "Calm",
+    "colors": ["#DC143C", "#FFD700"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Enrique+Iglesias+Hero"
+  },
+  {
+    "track": "The Streak",
+    "artist": "Ray Stevens",
+    "mood": "Amusement",
+    "primaryMood": "Happy",
+    "colors": ["#FFFF00", "#FF8C00"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Ray+Stevens+The+Streak"
+  },
+  {
+    "track": "Benny Hill Theme",
+    "artist": "Boots Randolph",
+    "mood": "Laughter/Playfulness",
+    "primaryMood": "Happy",
+    "colors": ["#FFFACD", "#FF69B4"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Boots+Randolph+Benny+Hill+Theme"
+  },
+  {
+    "track": "Kung Fu Fighting",
+    "artist": "Carl Douglas",
+    "mood": "Playful Excitement",
+    "primaryMood": "Excited",
+    "colors": ["#FF0000", "#FFD700"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Carl+Douglas+Kung+Fu+Fighting"
+  },
+  {
+    "track": "Escape (Piña Colada)",
+    "artist": "Rupert Holmes",
+    "mood": "Amusement/Warmth",
+    "primaryMood": "Calm",
+    "colors": ["#40E0D0", "#FF7F50"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Rupert+Holmes+Escape"
+  },
+  {
+    "track": "Don't Worry Be Happy",
+    "artist": "Bobby McFerrin",
+    "mood": "Calm/Joy",
+    "primaryMood": "Calm",
+    "colors": ["#FFFACD", "#90EE90"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Bobby+McFerrin+Dont+Worry+Be+Happy"
+  },
+  {
+    "track": "Sweet Lullaby",
+    "artist": "Deep Forest",
+    "mood": "Melancholic Serenity",
+    "primaryMood": "Calm",
+    "colors": ["#008080", "#9370DB"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Deep+Forest+Sweet+Lullaby"
+  },
+  {
+    "track": "Freak",
+    "artist": "Silverchair",
+    "mood": "Anger/Frustration",
+    "primaryMood": "Angry",
+    "colors": ["#2F4F4F", "#8B0000"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Silverchair+Freak"
+  },
+  {
+    "track": "Margaritaville",
+    "artist": "Jimmy Buffett",
+    "mood": "Relaxation",
+    "primaryMood": "Calm",
+    "colors": ["#40E0D0", "#F5F5DC"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Jimmy+Buffett+Margaritaville"
+  },
+  {
+    "track": "Thank God I'm a Country Boy",
+    "artist": "John Denver",
+    "mood": "Joy",
+    "primaryMood": "Happy",
+    "colors": ["#32CD32", "#FFD700"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=John+Denver+Thank+God+Im+a+Country+Boy"
+  },
+  {
+    "track": "A Country Boy Can Survive",
+    "artist": "Hank Williams Jr.",
+    "mood": "Resilience/Pride",
+    "primaryMood": "Calm",
+    "colors": ["#8B4513", "#006400"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Hank+Williams+Jr+A+Country+Boy+Can+Survive"
+  },
+  {
+    "track": "Devil Went Down to Georgia",
+    "artist": "Charlie Daniels Band",
+    "mood": "Excitement",
+    "primaryMood": "Excited",
+    "colors": ["#FF4500", "#A0522D"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Charlie+Daniels+Band+The+Devil+Went+Down+to+Georgia"
+  },
+  {
+    "track": "Islands in the Stream",
+    "artist": "Parton & Rogers",
+    "mood": "Affection",
+    "primaryMood": "Calm",
+    "colors": ["#FFC0CB", "#0000FF"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Dolly+Parton+Kenny+Rogers+Islands+in+the+Stream"
+  },
+  {
+    "track": "No Mountain High Enough",
+    "artist": "Gaye & Terrell",
+    "mood": "Assurance/Love",
+    "primaryMood": "Happy",
+    "colors": ["#FF0000", "#FFFF00"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Marvin+Gaye+Tammi+Terrell+Aint+No+Mountain+High+Enough"
+  },
+  {
+    "track": "Celebration",
+    "artist": "Kool & The Gang",
+    "mood": "Celebration/Joy",
+    "primaryMood": "Happy",
+    "colors": ["#FFD700", "#FFFF00"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Kool+and+The+Gang+Celebration"
+  },
+  {
+    "track": "Ride Like The Wind",
+    "artist": "Christopher Cross",
+    "mood": "Yearning/Determination",
+    "primaryMood": "Excited",
+    "colors": ["#191970", "#C0C0C0"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Christopher+Cross+Ride+Like+The+Wind"
+  },
+  {
+    "track": "Africa",
+    "artist": "Toto",
+    "mood": "Nostalgia/Awe",
+    "primaryMood": "Calm",
+    "colors": ["#00BFFF", "#FFD700"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Toto+Africa"
+  },
+  {
+    "track": "Hotel California",
+    "artist": "Eagles",
+    "mood": "Unease/Nostalgia",
+    "primaryMood": "Anxious",
+    "colors": ["#704214", "#4B0082"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Eagles+Hotel+California"
+  },
+  {
+    "track": "Ain't No Sunshine",
+    "artist": "Bill Withers",
+    "mood": "Sadness",
+    "primaryMood": "Sad",
+    "colors": ["#00008B", "#2F4F4F"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Bill+Withers+Aint+No+Sunshine"
+  },
+  {
+    "track": "Stayin' Alive",
+    "artist": "Bee Gees",
+    "mood": "Confidence/Groove",
+    "primaryMood": "Excited",
+    "colors": ["#008080", "#FF00FF"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Bee+Gees+Stayin+Alive"
+  },
+  {
+    "track": "Night Fever",
+    "artist": "Bee Gees",
+    "mood": "Excitement",
+    "primaryMood": "Excited",
+    "colors": ["#4B0082", "#FFD700"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Bee+Gees+Night+Fever"
+  },
+  {
+    "track": "Faith",
+    "artist": "Limp Bizkit",
+    "mood": "Defiance",
+    "primaryMood": "Angry",
+    "colors": ["#2F4F4F", "#000000"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Limp+Bizkit+Faith"
+  },
+  {
+    "track": "Break Stuff",
+    "artist": "Limp Bizkit",
+    "mood": "Rage",
+    "primaryMood": "Angry",
+    "colors": ["#8B0000", "#000000"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Limp+Bizkit+Break+Stuff"
+  },
+  {
+    "track": "Got The Life",
+    "artist": "Korn",
+    "mood": "Catharsis",
+    "primaryMood": "Angry",
+    "colors": ["#8B4513", "#000000"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Korn+Got+The+Life"
+  },
+  {
+    "track": "I Want It That Way",
+    "artist": "Backstreet Boys",
+    "mood": "Nostalgia/Love",
+    "primaryMood": "Happy",
+    "colors": ["#87CEEB", "#FFFFFF"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Backstreet+Boys+I+Want+It+That+Way"
+  },
+  {
+    "track": "Hey There Delilah",
+    "artist": "Plain White T’s",
+    "mood": "Tender Longing",
+    "primaryMood": "Calm",
+    "colors": ["#FFFFFF", "#F5F5F5"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Plain+White+Ts+Hey+There+Delilah"
+  },
+  {
+    "track": "Mr. Jones",
+    "artist": "Counting Crows",
+    "mood": "Hope/Longing",
+    "primaryMood": "Happy",
+    "colors": ["#FF8C00", "#8B4513"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Counting+Crows+Mr+Jones"
+  },
+  {
+    "track": "A Long December",
+    "artist": "Counting Crows",
+    "mood": "Sadness/Acceptance",
+    "primaryMood": "Sad",
+    "colors": ["#ADD8E6", "#FFFFFF"],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Counting+Crows+A+Long+December"
+  }
+]
