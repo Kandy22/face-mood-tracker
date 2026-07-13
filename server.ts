@@ -40,7 +40,7 @@ function getGeminiClient(): GoogleGenAI {
 }
 
 const app = express();
-const PORT = 3000;
+const PORT = Number(process.env.PORT) || 3000;
 
 // Set up JSON body parser with increased limit to handle base64 image data
 app.use(express.json({ limit: "15mb" }));

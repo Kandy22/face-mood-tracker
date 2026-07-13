@@ -4,63 +4,87 @@
     "artist": "Cyndi Lauper",
     "mood": "Joy / Freedom",
     "primaryMood": "Happy",
-    "colors": ["#FF69B4", "#FFFF00"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Cyndi+Lauper+Girls+Just+Want+to+Have+Fun"
+    "colors": [
+      "#FF69B4",
+      "#FFFF00"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=PIb6AZdTr-A"
   },
   {
     "track": "Landslide",
     "artist": "Fleetwood Mac",
     "mood": "Nostalgia / Vulnerability",
     "primaryMood": "Sad",
-    "colors": ["#556B2F", "#8B4513"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Fleetwood+Mac+Landslide"
+    "colors": [
+      "#556B2F",
+      "#8B4513"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=WM7-PYtXtJM"
   },
   {
     "track": "Joy to the World",
     "artist": "Three Dog Night",
     "mood": "Communal Joy",
     "primaryMood": "Happy",
-    "colors": ["#FFA500", "#FFD700"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Three+Dog+Night+Joy+to+the+World"
+    "colors": [
+      "#FFA500",
+      "#FFD700"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=EVcpKjXYa5c"
   },
   {
     "track": "Happy",
     "artist": "Pharrell Williams",
     "mood": "Optimism / Celebration",
     "primaryMood": "Happy",
-    "colors": ["#FFFF00", "#87CEEB"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Pharrell+Williams+Happy"
+    "colors": [
+      "#FFFF00",
+      "#87CEEB"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=ZbZSe6N_BXs"
   },
   {
     "track": "Welcome to the Jungle",
     "artist": "Guns N’ Roses",
     "mood": "Adrenaline / Fear",
     "primaryMood": "Anxious",
-    "colors": ["#FF0000", "#000000"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Guns+N+Roses+Welcome+to+the+Jungle"
+    "colors": [
+      "#FF0000",
+      "#000000"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=xyzlrA1IYcY"
   },
   {
     "track": "Enter Sandman",
     "artist": "Metallica",
     "mood": "Fear / Unease",
     "primaryMood": "Anxious",
-    "colors": ["#000000", "#708090"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Metallica+Enter+Sandman"
+    "colors": [
+      "#000000",
+      "#708090"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=CD-E-LDc384"
   },
   {
     "track": "Another One Bites the Dust",
     "artist": "Queen",
     "mood": "Power / Confidence",
     "primaryMood": "Neutral",
-    "colors": ["#800080", "#8B0000"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Queen+Another+One+Bites+the+Dust"
+    "colors": [
+      "#800080",
+      "#8B0000"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=rY0WxgSXdEE"
   },
   {
     "track": "We Are the Champions",
     "artist": "Queen",
     "mood": "Victory / Pride",
     "primaryMood": "Happy",
-    "colors": ["#FFD700", "#FFFFFF"],
+    "colors": [
+      "#FFD700",
+      "#FFFFFF"
+    ],
     "youtubeUrl": "https://www.youtube.com/results?search_query=Queen+We+Are+the+Champions"
   },
   {
@@ -68,111 +92,153 @@
     "artist": "Gloria Gaynor",
     "mood": "Empowerment",
     "primaryMood": "Happy",
-    "colors": ["#800080", "#FF00FF"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Gloria+Gaynor+I+Will+Survive"
+    "colors": [
+      "#800080",
+      "#FF00FF"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=6dYWe1c3OyU"
   },
   {
     "track": "What a Wonderful World",
     "artist": "Louis Armstrong",
     "mood": "Hope / Serenity",
     "primaryMood": "Calm",
-    "colors": ["#98FB98", "#FF8C00"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Louis+Armstrong+What+a+Wonderful+World"
+    "colors": [
+      "#98FB98",
+      "#FF8C00"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=rBrd_3VMC3c"
   },
   {
     "track": "Variations on the Kanon",
     "artist": "George Winston",
     "mood": "Calm / Reflection",
     "primaryMood": "Calm",
-    "colors": ["#FFFFFF", "#C0C0C0"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=George+Winston+Variations+on+the+Kanon"
+    "colors": [
+      "#FFFFFF",
+      "#C0C0C0"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=1wAGacczNho"
   },
   {
     "track": "9 to 5",
     "artist": "Dolly Parton",
     "mood": "Motivation / Resilience",
     "primaryMood": "Happy",
-    "colors": ["#FF0000", "#FFA500"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Dolly+Parton+9+to+5"
+    "colors": [
+      "#FF0000",
+      "#FFA500"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=UbxUSsFXYo4"
   },
   {
     "track": "Numb",
     "artist": "Linkin Park",
     "mood": "Anguish",
     "primaryMood": "Sad",
-    "colors": ["#808080", "#2F4F4F"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Linkin+Park+Numb"
+    "colors": [
+      "#808080",
+      "#2F4F4F"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=kXYiU_JCYtU"
   },
   {
     "track": "Move Along",
     "artist": "All-American Rejects",
     "mood": "Determination",
     "primaryMood": "Excited",
-    "colors": ["#FF8C00", "#FF4500"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=All-American+Rejects+Move+Along"
+    "colors": [
+      "#FF8C00",
+      "#FF4500"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=XleOkGsYgO8"
   },
   {
     "track": "Dirty Little Secret",
     "artist": "All-American Rejects",
     "mood": "Guilt/Mischief",
     "primaryMood": "Anxious",
-    "colors": ["#4B0082", "#8B0000"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=All-American+Rejects+Dirty+Little+Secret"
+    "colors": [
+      "#4B0082",
+      "#8B0000"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=gPDcwjJ8pLg"
   },
   {
     "track": "Gives You Hell",
     "artist": "All-American Rejects",
     "mood": "Schadenfreude",
     "primaryMood": "Angry",
-    "colors": ["#FF0000", "#FF00FF"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=All-American+Rejects+Gives+You+Hell"
+    "colors": [
+      "#FF0000",
+      "#FF00FF"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=A6APxbBYnoo"
   },
   {
     "track": "Hands Clean",
     "artist": "Alanis Morissette",
     "mood": "Regret",
     "primaryMood": "Sad",
-    "colors": ["#00008B", "#708090"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Alanis+Morissette+Hands+Clean"
+    "colors": [
+      "#00008B",
+      "#708090"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=2dH289KxkGw"
   },
   {
     "track": "The Reason",
     "artist": "Hoobastank",
     "mood": "Remorse/Hope",
     "primaryMood": "Sad",
-    "colors": ["#ADD8E6", "#FFD700"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Hoobastank+The+Reason"
+    "colors": [
+      "#ADD8E6",
+      "#FFD700"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=fV4DiAyExN0"
   },
   {
     "track": "Outside",
     "artist": "Staind",
     "mood": "Loneliness/Longing",
     "primaryMood": "Sad",
-    "colors": ["#4B0082", "#008080"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Staind+Outside"
+    "colors": [
+      "#4B0082",
+      "#008080"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=mVQpfoqsY8Q"
   },
   {
     "track": "A Little Bit Stronger",
     "artist": "Sara Evans",
     "mood": "Resilience",
     "primaryMood": "Calm",
-    "colors": ["#FFB6C1", "#F5F5DC"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Sara+Evans+A+Little+Bit+Stronger"
+    "colors": [
+      "#FFB6C1",
+      "#F5F5DC"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=22zB6Soc2Gk"
   },
   {
     "track": "Born To Fly",
     "artist": "Sara Evans",
     "mood": "Freedom/Hope",
     "primaryMood": "Happy",
-    "colors": ["#87CEEB", "#FFFFFF"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Sara+Evans+Born+To+Fly"
+    "colors": [
+      "#87CEEB",
+      "#FFFFFF"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=8xvhutWc67k"
   },
   {
     "track": "How Do I Live",
     "artist": "Michael Bolton",
     "mood": "Longing",
     "primaryMood": "Sad",
-    "colors": ["#C71585", "#8B0000"],
+    "colors": [
+      "#C71585",
+      "#8B0000"
+    ],
     "youtubeUrl": "https://www.youtube.com/results?search_query=Michael+Bolton+How+Do+I+Live"
   },
   {
@@ -180,47 +246,65 @@
     "artist": "Enrique Iglesias",
     "mood": "Love/Devotion",
     "primaryMood": "Calm",
-    "colors": ["#DC143C", "#FFD700"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Enrique+Iglesias+Hero"
+    "colors": [
+      "#DC143C",
+      "#FFD700"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=koJlIGDImiU"
   },
   {
     "track": "The Streak",
     "artist": "Ray Stevens",
     "mood": "Amusement",
     "primaryMood": "Happy",
-    "colors": ["#FFFF00", "#FF8C00"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Ray+Stevens+The+Streak"
+    "colors": [
+      "#FFFF00",
+      "#FF8C00"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=bxUfg3uCBbg"
   },
   {
     "track": "Benny Hill Theme",
     "artist": "Boots Randolph",
     "mood": "Laughter/Playfulness",
     "primaryMood": "Happy",
-    "colors": ["#FFFACD", "#FF69B4"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Boots+Randolph+Benny+Hill+Theme"
+    "colors": [
+      "#FFFACD",
+      "#FF69B4"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=MK6TXMsvgQg"
   },
   {
     "track": "Kung Fu Fighting",
     "artist": "Carl Douglas",
     "mood": "Playful Excitement",
     "primaryMood": "Excited",
-    "colors": ["#FF0000", "#FFD700"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Carl+Douglas+Kung+Fu+Fighting"
+    "colors": [
+      "#FF0000",
+      "#FFD700"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=bjnFXgdyyLw"
   },
   {
     "track": "Escape (Piña Colada)",
     "artist": "Rupert Holmes",
     "mood": "Amusement/Warmth",
     "primaryMood": "Calm",
-    "colors": ["#40E0D0", "#FF7F50"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Rupert+Holmes+Escape"
+    "colors": [
+      "#40E0D0",
+      "#FF7F50"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=YGAeI5KODLA"
   },
   {
     "track": "Don't Worry Be Happy",
     "artist": "Bobby McFerrin",
     "mood": "Calm/Joy",
     "primaryMood": "Calm",
-    "colors": ["#FFFACD", "#90EE90"],
+    "colors": [
+      "#FFFACD",
+      "#90EE90"
+    ],
     "youtubeUrl": "https://www.youtube.com/results?search_query=Bobby+McFerrin+Dont+Worry+Be+Happy"
   },
   {
@@ -228,175 +312,406 @@
     "artist": "Deep Forest",
     "mood": "Melancholic Serenity",
     "primaryMood": "Calm",
-    "colors": ["#008080", "#9370DB"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Deep+Forest+Sweet+Lullaby"
+    "colors": [
+      "#008080",
+      "#9370DB"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=lIF5EEneWEU"
   },
   {
     "track": "Freak",
     "artist": "Silverchair",
     "mood": "Anger/Frustration",
     "primaryMood": "Angry",
-    "colors": ["#2F4F4F", "#8B0000"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Silverchair+Freak"
+    "colors": [
+      "#2F4F4F",
+      "#8B0000"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=8KHwuOtcALQ"
   },
   {
     "track": "Margaritaville",
     "artist": "Jimmy Buffett",
     "mood": "Relaxation",
     "primaryMood": "Calm",
-    "colors": ["#40E0D0", "#F5F5DC"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Jimmy+Buffett+Margaritaville"
+    "colors": [
+      "#40E0D0",
+      "#F5F5DC"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=mrF4nF8VUb4"
   },
   {
     "track": "Thank God I'm a Country Boy",
     "artist": "John Denver",
     "mood": "Joy",
     "primaryMood": "Happy",
-    "colors": ["#32CD32", "#FFD700"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=John+Denver+Thank+God+Im+a+Country+Boy"
+    "colors": [
+      "#32CD32",
+      "#FFD700"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=QRuCPS_-_IA"
   },
   {
     "track": "A Country Boy Can Survive",
     "artist": "Hank Williams Jr.",
     "mood": "Resilience/Pride",
     "primaryMood": "Calm",
-    "colors": ["#8B4513", "#006400"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Hank+Williams+Jr+A+Country+Boy+Can+Survive"
+    "colors": [
+      "#8B4513",
+      "#006400"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=3cQNkIrg-Tk"
   },
   {
     "track": "Devil Went Down to Georgia",
     "artist": "Charlie Daniels Band",
     "mood": "Excitement",
     "primaryMood": "Excited",
-    "colors": ["#FF4500", "#A0522D"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Charlie+Daniels+Band+The+Devil+Went+Down+to+Georgia"
+    "colors": [
+      "#FF4500",
+      "#A0522D"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=sh7BZf7D5Bw"
   },
   {
     "track": "Islands in the Stream",
     "artist": "Parton & Rogers",
     "mood": "Affection",
     "primaryMood": "Calm",
-    "colors": ["#FFC0CB", "#0000FF"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Dolly+Parton+Kenny+Rogers+Islands+in+the+Stream"
+    "colors": [
+      "#FFC0CB",
+      "#0000FF"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=uObstcmJeLw"
   },
   {
     "track": "No Mountain High Enough",
     "artist": "Gaye & Terrell",
     "mood": "Assurance/Love",
     "primaryMood": "Happy",
-    "colors": ["#FF0000", "#FFFF00"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Marvin+Gaye+Tammi+Terrell+Aint+No+Mountain+High+Enough"
+    "colors": [
+      "#FF0000",
+      "#FFFF00"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=ABfQuZqq8wg"
   },
   {
     "track": "Celebration",
     "artist": "Kool & The Gang",
     "mood": "Celebration/Joy",
     "primaryMood": "Happy",
-    "colors": ["#FFD700", "#FFFF00"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Kool+and+The+Gang+Celebration"
+    "colors": [
+      "#FFD700",
+      "#FFFF00"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=3GwjfUFyY6M"
   },
   {
     "track": "Ride Like The Wind",
     "artist": "Christopher Cross",
     "mood": "Yearning/Determination",
     "primaryMood": "Excited",
-    "colors": ["#191970", "#C0C0C0"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Christopher+Cross+Ride+Like+The+Wind"
+    "colors": [
+      "#191970",
+      "#C0C0C0"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=kA9uaBqvRtA"
   },
   {
     "track": "Africa",
     "artist": "Toto",
     "mood": "Nostalgia/Awe",
     "primaryMood": "Calm",
-    "colors": ["#00BFFF", "#FFD700"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Toto+Africa"
+    "colors": [
+      "#00BFFF",
+      "#FFD700"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=FTQbiNvZqaY"
   },
   {
     "track": "Hotel California",
     "artist": "Eagles",
     "mood": "Unease/Nostalgia",
     "primaryMood": "Anxious",
-    "colors": ["#704214", "#4B0082"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Eagles+Hotel+California"
+    "colors": [
+      "#704214",
+      "#4B0082"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=09839DpTctU"
   },
   {
     "track": "Ain't No Sunshine",
     "artist": "Bill Withers",
     "mood": "Sadness",
     "primaryMood": "Sad",
-    "colors": ["#00008B", "#2F4F4F"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Bill+Withers+Aint+No+Sunshine"
+    "colors": [
+      "#00008B",
+      "#2F4F4F"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=CICIOJqEb5c"
   },
   {
     "track": "Stayin' Alive",
     "artist": "Bee Gees",
     "mood": "Confidence/Groove",
     "primaryMood": "Excited",
-    "colors": ["#008080", "#FF00FF"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Bee+Gees+Stayin+Alive"
+    "colors": [
+      "#008080",
+      "#FF00FF"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=YxvBPH4sArQ"
   },
   {
     "track": "Night Fever",
     "artist": "Bee Gees",
     "mood": "Excitement",
     "primaryMood": "Excited",
-    "colors": ["#4B0082", "#FFD700"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Bee+Gees+Night+Fever"
+    "colors": [
+      "#4B0082",
+      "#FFD700"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=e6GB04zeDeQ"
   },
   {
     "track": "Faith",
     "artist": "Limp Bizkit",
     "mood": "Defiance",
     "primaryMood": "Angry",
-    "colors": ["#2F4F4F", "#000000"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Limp+Bizkit+Faith"
+    "colors": [
+      "#2F4F4F",
+      "#000000"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=qEcic7j4bMc"
   },
   {
     "track": "Break Stuff",
     "artist": "Limp Bizkit",
     "mood": "Rage",
     "primaryMood": "Angry",
-    "colors": ["#8B0000", "#000000"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Limp+Bizkit+Break+Stuff"
+    "colors": [
+      "#8B0000",
+      "#000000"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=ZpUYjpKg9KY"
   },
   {
     "track": "Got The Life",
     "artist": "Korn",
     "mood": "Catharsis",
     "primaryMood": "Angry",
-    "colors": ["#8B4513", "#000000"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Korn+Got+The+Life"
+    "colors": [
+      "#8B4513",
+      "#000000"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=VAWjsVoDpm0"
   },
   {
     "track": "I Want It That Way",
     "artist": "Backstreet Boys",
     "mood": "Nostalgia/Love",
     "primaryMood": "Happy",
-    "colors": ["#87CEEB", "#FFFFFF"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Backstreet+Boys+I+Want+It+That+Way"
+    "colors": [
+      "#87CEEB",
+      "#FFFFFF"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=4fndeDfaWCg"
   },
   {
     "track": "Hey There Delilah",
     "artist": "Plain White T’s",
     "mood": "Tender Longing",
     "primaryMood": "Calm",
-    "colors": ["#FFFFFF", "#F5F5F5"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Plain+White+Ts+Hey+There+Delilah"
+    "colors": [
+      "#FFFFFF",
+      "#F5F5F5"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=h_m-BjrxmgI"
   },
   {
     "track": "Mr. Jones",
     "artist": "Counting Crows",
     "mood": "Hope/Longing",
     "primaryMood": "Happy",
-    "colors": ["#FF8C00", "#8B4513"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Counting+Crows+Mr+Jones"
+    "colors": [
+      "#FF8C00",
+      "#8B4513"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=-oqAU5VxFWs"
   },
   {
     "track": "A Long December",
     "artist": "Counting Crows",
     "mood": "Sadness/Acceptance",
     "primaryMood": "Sad",
-    "colors": ["#ADD8E6", "#FFFFFF"],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Counting+Crows+A+Long+December"
+    "colors": [
+      "#ADD8E6",
+      "#FFFFFF"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=1D5PtyrewSs"
+  },
+  {
+    "track": "Goodnight Saigon",
+    "artist": "Billy Joel",
+    "mood": "War / Reflection",
+    "primaryMood": "Sad",
+    "colors": [
+      "#556B2F",
+      "#708090"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=Qjzjhl-QztE"
+  },
+  {
+    "track": "You Get What You Give",
+    "artist": "New Radicals",
+    "mood": "Defiant Optimism",
+    "primaryMood": "Excited",
+    "colors": [
+      "#FF8C00",
+      "#1E90FF"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=DL7-CKirWZE"
+  },
+  {
+    "track": "Midnight Rider",
+    "artist": "Allman Brothers",
+    "mood": "Restless Freedom",
+    "primaryMood": "Excited",
+    "colors": [
+      "#8B4513",
+      "#2F4F4F"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=Z8zk7XKyoE8"
+  },
+  {
+    "track": "You Oughta Know",
+    "artist": "Alanis Morissette",
+    "mood": "Anger / Betrayal",
+    "primaryMood": "Angry",
+    "colors": [
+      "#8B0000",
+      "#4B0082"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=NPcyTyilmYY"
+  },
+  {
+    "track": "On Broadway",
+    "artist": "George Benson",
+    "mood": "Urban Confidence",
+    "primaryMood": "Calm",
+    "colors": [
+      "#DAA520",
+      "#000000"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=ok__l1Acuwg"
+  },
+  {
+    "track": "Adagio in G Minor",
+    "artist": "Albinoni",
+    "mood": "Solemn / Grief",
+    "primaryMood": "Sad",
+    "colors": [
+      "#2F4F4F",
+      "#000000"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=ezAaIOGkfAY"
+  },
+  {
+    "track": "Ride of the Valkyries",
+    "artist": "Wagner",
+    "mood": "Epic Tension",
+    "primaryMood": "Anxious",
+    "colors": [
+      "#8B0000",
+      "#000000"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=D5IL2lKYRNw"
+  },
+  {
+    "track": "Holding Back the Years",
+    "artist": "Simply Red",
+    "mood": "Wistful Regret",
+    "primaryMood": "Sad",
+    "colors": [
+      "#B22222",
+      "#DAA520"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=yG07WSu7Q9w"
+  },
+  {
+    "track": "Seminole Wind",
+    "artist": "John Anderson",
+    "mood": "Melancholic Nature",
+    "primaryMood": "Sad",
+    "colors": [
+      "#556B2F",
+      "#4682B4"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=W8sh9P3X33w"
+  },
+  {
+    "track": "The Wreck of the Edmund Fitzgerald",
+    "artist": "Gordon Lightfoot",
+    "mood": "Somber Tragedy",
+    "primaryMood": "Sad",
+    "colors": [
+      "#2F4F4F",
+      "#000080"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=ZhUOtVn0wCM"
+  },
+  {
+    "track": "Stressed Out",
+    "artist": "A Tribe Called Quest",
+    "mood": "Tense Groove",
+    "primaryMood": "Anxious",
+    "colors": [
+      "#4B0082",
+      "#2F4F4F"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=EVNIZK1tRuo"
+  },
+  {
+    "track": "Fancy",
+    "artist": "Iggy Azalea",
+    "mood": "Confident Swagger",
+    "primaryMood": "Excited",
+    "colors": [
+      "#FF1493",
+      "#FFD700"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=O-zpOMYRi0w"
+  },
+  {
+    "track": "Lose Yourself",
+    "artist": "Eminem",
+    "mood": "Determination / Pressure",
+    "primaryMood": "Excited",
+    "colors": [
+      "#000000",
+      "#FF4500"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=_Yhyp-_hX2s"
+  },
+  {
+    "track": "Pets",
+    "artist": "Porno for Pyros",
+    "mood": "Eerie Groove",
+    "primaryMood": "Anxious",
+    "colors": [
+      "#556B2F",
+      "#000000"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=RgPeP_pfjp4"
+  },
+  {
+    "track": "Can You Stand the Rain",
+    "artist": "New Edition",
+    "mood": "Tender Devotion",
+    "primaryMood": "Calm",
+    "colors": [
+      "#4169E1",
+      "#FFFFFF"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=7flrKMGfwjw"
   }
 ]
