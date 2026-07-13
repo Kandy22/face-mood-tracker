@@ -32,11 +32,41 @@ import {
 } from "lucide-react";
 import { MoodResult, MoodHistoryItem } from "./types";
 import { MoodSynthEngine } from "./lib/synthEngine";
+import { useYouTubePlayer } from "./lib/useYouTubePlayer";
 import { MOOD_THEMES } from "./lib/moodThemes";
 import AudioVisualizer from "./components/AudioVisualizer";
 import GradientPicker from "./components/GradientPicker";
+import SongDetailModal, { CalibrationSong } from "./components/SongDetailModal";
 import { hslToHex, brightenHex } from "./lib/colorUtils";
 import songsData from "./data/songs.json";
+import tracksData from "./data/tracks.json";
+
+// A real, playable track from the 144-track YouTube playlist catalog
+// (built from youtube-mim-217-tracks.csv by scripts/build_tracks.py).
+interface RealTrack {
+  videoId: string;
+  title: string;
+  artist: string;
+  mood: string;
+  type: string; // "music" | "clip" — clips (trailers etc.) stay out of mood queues
+  duration: string;
+  views: string;
+  thumbnail: string;
+  youtubeUrl: string;
+}
+const REAL_TRACKS = tracksData as RealTrack[];
+
+// Pick a random real music track matching the mood (avoiding an immediate
+// repeat). Falls back to the whole music catalog if a mood bucket is empty.
+function pickRealTrack(mood: string, avoidId?: string): RealTrack | null {
+  const music = REAL_TRACKS.filter((t) => t.type === "music");
+  let pool = music.filter(
+    (t) => t.mood.toLowerCase() === mood.toLowerCase() && t.videoId !== avoidId,
+  );
+  if (pool.length === 0) pool = music.filter((t) => t.videoId !== avoidId);
+  if (pool.length === 0) return null;
+  return pool[Math.floor(Math.random() * pool.length)];
+}
 
 // Spectral analysis hook mapping energy & brightness features
 function useSpectralAnalyzer(analyserNode: AnalyserNode | null, active: boolean) {
@@ -123,6 +153,38 @@ export default function App() {
   const [audioPlaybackType, setAudioPlaybackType] = useState<'synth' | 'youtube'>('youtube');
   const [activeYoutubeUrl, setActiveYoutubeUrl] = useState<string | null>(null);
   const [activeYoutubeSearch, setActiveYoutubeSearch] = useState<string | null>(null);
+  // The real playlist track currently loaded in the YouTube player
+  const [activeTrack, setActiveTrack] = useState<RealTrack | null>(null);
+
+  // Audio-only YouTube playback — no visible video by design (that surfaces
+  // later for the Tribe EEG-scan feature). One persistent, hidden Player
+  // instance gives us real stopVideo()/volume control and an onError signal
+  // for videos with embedding disabled, instead of appearing/disappearing
+  // iframes that could be left un-stoppable.
+  const handleUnplayableTrack = useCallback((videoId: string) => {
+    const mood = activeMood ? activeMood.mood : manualMood;
+    const next = pickRealTrack(mood, videoId);
+    if (next) {
+      setActiveTrack(next);
+      setActiveYoutubeUrl(next.youtubeUrl);
+      setActiveYoutubeSearch(`${next.artist} - ${next.title}`);
+    }
+  }, [activeMood, manualMood]);
+
+  const { play: ytPlay, stop: ytStop } = useYouTubePlayer({
+    containerId: "yt-audio-player",
+    volume,
+    muted: isMuted,
+    onUnplayable: handleUnplayableTrack,
+  });
+
+  useEffect(() => {
+    if (audioPlaybackType === "youtube" && activeTrack && isPlayingSynth) {
+      ytPlay(activeTrack.videoId);
+    } else {
+      ytStop();
+    }
+  }, [audioPlaybackType, activeTrack, isPlayingSynth, ytPlay, ytStop]);
 
   // Correction feedback loop states
   const [correctionLog, setCorrectionLog] = useState<any[]>([]);
@@ -131,6 +193,7 @@ export default function App() {
   // Calibration Track Library States
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [selectedMoodFilter, setSelectedMoodFilter] = useState<string>("All");
+  const [detailSong, setDetailSong] = useState<CalibrationSong | null>(null);
 
   // Gradient Picker & Reactive Glow States
   const [pointer, setPointer] = useState<number>(0.5); // 0 to 1
@@ -196,13 +259,12 @@ export default function App() {
           setActiveMood(lastResult);
           setManualMood(lastResult.mood);
 
-          // Find matching song in the verified calibration dataset
-          const matchingSong = songsData.find(
-            (s) => s.track === lastResult.songRecommendation.title || s.primaryMood.toLowerCase() === lastResult.mood.toLowerCase()
-          );
-          if (matchingSong) {
-            setActiveYoutubeUrl(matchingSong.youtubeUrl);
-            setActiveYoutubeSearch(`${matchingSong.artist} - ${matchingSong.track}`);
+          // Queue a real playlist track for the restored mood
+          const restoredTrack = pickRealTrack(lastResult.mood);
+          if (restoredTrack) {
+            setActiveTrack(restoredTrack);
+            setActiveYoutubeUrl(restoredTrack.youtubeUrl);
+            setActiveYoutubeSearch(`${restoredTrack.artist} - ${restoredTrack.title}`);
           }
         }
       }
@@ -423,14 +485,14 @@ export default function App() {
       setHistory(updatedHistory);
       localStorage.setItem("face_mood_history_v1", JSON.stringify(updatedHistory));
 
-      // Find matching song in verified calibration dataset
-      const matchingSong = songsData.find(
-        (s) => s.track === result.songRecommendation.title || s.primaryMood.toLowerCase() === result.mood.toLowerCase()
-      );
-      if (matchingSong) {
-        setActiveYoutubeUrl(matchingSong.youtubeUrl);
-        setActiveYoutubeSearch(`${matchingSong.artist} - ${matchingSong.track}`);
+      // Pick a REAL track from the playlist catalog for the detected mood
+      const realTrack = pickRealTrack(result.mood, activeTrack?.videoId);
+      if (realTrack) {
+        setActiveTrack(realTrack);
+        setActiveYoutubeUrl(realTrack.youtubeUrl);
+        setActiveYoutubeSearch(`${realTrack.artist} - ${realTrack.title}`);
       } else {
+        setActiveTrack(null);
         setActiveYoutubeUrl(null);
         setActiveYoutubeSearch(null);
       }
@@ -464,18 +526,12 @@ export default function App() {
 
       const bpm = activeMood?.songRecommendation.tempo || 80;
 
-      // Find matching song from the 50-song calibration bank
-      const matchingSongs = songsData.filter(
-        (s) => s.primaryMood.toLowerCase() === mood.toLowerCase()
-      );
-      const randomSong =
-        matchingSongs.length > 0
-          ? matchingSongs[Math.floor(Math.random() * matchingSongs.length)]
-          : null;
-
-      if (randomSong) {
-        setActiveYoutubeUrl(randomSong.youtubeUrl);
-        setActiveYoutubeSearch(`${randomSong.artist} - ${randomSong.track}`);
+      // Pick a REAL track from the playlist catalog for this mood
+      const randomTrack = pickRealTrack(mood, activeTrack?.videoId);
+      if (randomTrack) {
+        setActiveTrack(randomTrack);
+        setActiveYoutubeUrl(randomTrack.youtubeUrl);
+        setActiveYoutubeSearch(`${randomTrack.artist} - ${randomTrack.title}`);
       }
 
       if (audioPlaybackType === 'synth') {
@@ -499,11 +555,11 @@ export default function App() {
             expressionDetails: "Listening to manual interactive mood soundscapes.",
           },
           songRecommendation: {
-            title: randomSong ? randomSong.track : `Procedural ${mood} Symphony`,
-            artist: randomSong ? randomSong.artist : "Neural Synth Engine",
-            genre: randomSong ? randomSong.mood : "Ambient Soundscape",
+            title: randomTrack ? randomTrack.title : `Procedural ${mood} Symphony`,
+            artist: randomTrack ? randomTrack.artist : "Neural Synth Engine",
+            genre: randomTrack ? randomTrack.mood : "Ambient Soundscape",
             tempo: bpm,
-            description: randomSong ? `This procedural soundscape is calibrated to map to "${randomSong.track}" by ${randomSong.artist}.` : `A custom-engineered ambient loop procedurally modulated to reinforce a ${mood} state.`,
+            description: randomTrack ? `Now queued from your playlist: "${randomTrack.title}" by ${randomTrack.artist}.` : `A custom-engineered ambient loop procedurally modulated to reinforce a ${mood} state.`,
           },
         });
       }
@@ -618,8 +674,25 @@ export default function App() {
       setPointer(theme.hue);
     }
 
-    setActiveYoutubeUrl(song.youtubeUrl);
-    setActiveYoutubeSearch(`${song.artist} - ${song.track}`);
+    // Prefer the EXACT song if it exists in the real playlist catalog
+    // (clicking "Landslide" should play Landslide); otherwise pick any
+    // real track matching the forced mood.
+    const clickedTitle = song.track.toLowerCase();
+    const exactTrack = REAL_TRACKS.find(
+      (t) =>
+        t.type === "music" &&
+        (t.title.toLowerCase().includes(clickedTitle) ||
+          clickedTitle.includes(t.title.toLowerCase())),
+    );
+    const forcedTrack = exactTrack ?? pickRealTrack(moodName, activeTrack?.videoId);
+    if (forcedTrack) {
+      setActiveTrack(forcedTrack);
+      setActiveYoutubeUrl(forcedTrack.youtubeUrl);
+      setActiveYoutubeSearch(`${forcedTrack.artist} - ${forcedTrack.title}`);
+    } else {
+      setActiveYoutubeUrl(song.youtubeUrl);
+      setActiveYoutubeSearch(`${song.artist} - ${song.track}`);
+    }
 
     if (audioPlaybackType === 'synth') {
       synthEngine.play(moodName, customResult.songRecommendation.tempo);
@@ -932,6 +1005,15 @@ export default function App() {
       id="app_root_container"
       className="min-h-screen relative flex flex-col justify-between font-sans transition-all duration-1000 ease-in-out bg-slate-950 text-slate-100 overflow-hidden"
     >
+      {/* Hidden, persistent audio-only YouTube player. Mounted once (not
+          conditionally) so there is exactly one Player instance we fully
+          control via stopVideo()/destroy() — no appearing/disappearing
+          iframes that can be left un-stoppable. 1x1px, not display:none
+          (YT requires real layout to initialize reliably). */}
+      <div style={{ position: "fixed", width: 1, height: 1, overflow: "hidden", opacity: 0, pointerEvents: "none" }}>
+        <div id="yt-audio-player" />
+      </div>
+
       {/* CONSTANT MOOD LIGHT WALL GLOW */}
       <div
         id="ambient_mood_glow"
@@ -1154,6 +1236,17 @@ export default function App() {
 
             {/* ACTION TRIGGERS & CAMERA OPTIONS */}
             <div className="mt-4 space-y-3">
+              {/* ALWAYS-VISIBLE STOP MUSIC — shows in any mode while sound is playing */}
+              {isPlayingSynth && (
+                <button
+                  onClick={() => { synthEngine.stop(); setIsPlayingSynth(false); }}
+                  aria-label="Stop music"
+                  className="w-full py-4 px-5 bg-gradient-to-r from-red-600 to-rose-700 hover:from-red-500 hover:to-rose-600 text-white rounded-xl text-base font-bold flex items-center justify-center gap-2.5 shadow-[0_4px_20px_rgba(220,38,38,0.35)] transition-all cursor-pointer border border-red-500/40"
+                >
+                  <Square className="w-5 h-5 fill-white" />
+                  <span>STOP MUSIC</span>
+                </button>
+              )}
               {/* PRIMARY ACTION ROWS */}
               <div className="grid grid-cols-2 gap-3">
                 {currentMode === "Sonic" ? (
@@ -1481,16 +1574,21 @@ export default function App() {
                   return (
                     <div
                       key={song.track}
-                      className={`p-2.5 bg-slate-950/60 border rounded-xl flex items-center justify-between text-xs transition-all hover:bg-slate-950 group ${
+                      onClick={() => setDetailSong(song as CalibrationSong)}
+                      className={`p-2.5 bg-slate-950/60 border rounded-xl flex items-center justify-between text-xs transition-all hover:bg-slate-950 group cursor-pointer ${
                         isActive
                           ? "border-emerald-500 bg-slate-950 shadow-[0_0_15px_rgba(16,185,129,0.1)]"
                           : "border-slate-900 hover:border-slate-800"
                       }`}
+                      title={`View calibration details for ${song.track}`}
                     >
                       <div className="flex items-center gap-2.5 min-w-0 flex-grow">
                         {/* Interactive trigger / play indicator */}
                         <button
-                          onClick={() => playSongFromLibrary(song)}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            playSongFromLibrary(song);
+                          }}
                           className={`w-7 h-7 rounded-lg flex items-center justify-center shrink-0 border transition-all cursor-pointer ${
                             isActive
                               ? "bg-emerald-500 text-slate-950 border-emerald-400"
@@ -1560,6 +1658,7 @@ export default function App() {
                           href={song.youtubeUrl}
                           target="_blank"
                           rel="noreferrer"
+                          onClick={(e) => e.stopPropagation()}
                           className="p-1.5 rounded-lg bg-slate-900 border border-slate-800/85 hover:border-slate-700 hover:bg-slate-850 text-slate-400 hover:text-white transition-all cursor-pointer flex items-center justify-center"
                           title="Open on YouTube"
                         >
@@ -1604,44 +1703,96 @@ export default function App() {
             <div className="p-3 bg-slate-950/60 border border-slate-800/60 rounded-xl mb-4 relative overflow-hidden">
               <div className="flex justify-between items-start">
                 <div className="min-w-0 flex-grow pr-2">
-                  <span className="text-[10px] font-mono uppercase tracking-widest text-slate-400 block mb-0.5">Matching Song Vibe</span>
+                  <span className="text-[10px] font-mono uppercase tracking-widest text-slate-400 block mb-0.5">
+                    {audioPlaybackType === 'youtube' && activeTrack ? "Now Queued · Real Track" : "Matching Song Vibe"}
+                  </span>
                   <h3 className="text-base font-bold text-white truncate">
-                    {activeMood ? activeMood.songRecommendation.title : `Procedural ${manualMood} Symphony`}
+                    {audioPlaybackType === 'youtube' && activeTrack
+                      ? activeTrack.title
+                      : activeMood ? activeMood.songRecommendation.title : `Procedural ${manualMood} Symphony`}
                   </h3>
                   <p className="text-xs text-slate-300 font-medium truncate mb-2">
-                    by {activeMood ? activeMood.songRecommendation.artist : "AI Synth Engine"}
+                    by {audioPlaybackType === 'youtube' && activeTrack
+                      ? activeTrack.artist
+                      : activeMood ? activeMood.songRecommendation.artist : "AI Synth Engine"}
                   </p>
-                  
+
                   <div className="flex flex-wrap gap-1.5">
-                    <span className="px-2 py-0.5 bg-slate-900 text-slate-400 border border-slate-800 text-[10px] font-mono rounded">
-                      {activeMood ? activeMood.songRecommendation.genre : "Ambient Soundscape"}
-                    </span>
-                    <span className="px-2 py-0.5 bg-slate-900 text-slate-400 border border-slate-800 text-[10px] font-mono rounded">
-                      {activeMood ? `${activeMood.songRecommendation.tempo} BPM` : "80 BPM"}
-                    </span>
+                    {audioPlaybackType === 'youtube' && activeTrack ? (
+                      <>
+                        <span className="px-2 py-0.5 bg-slate-900 text-slate-400 border border-slate-800 text-[10px] font-mono rounded">
+                          {activeTrack.mood}
+                        </span>
+                        {activeTrack.duration && (
+                          <span className="px-2 py-0.5 bg-slate-900 text-slate-400 border border-slate-800 text-[10px] font-mono rounded">
+                            {activeTrack.duration}
+                          </span>
+                        )}
+                        {activeTrack.views && (
+                          <span className="px-2 py-0.5 bg-slate-900 text-slate-400 border border-slate-800 text-[10px] font-mono rounded">
+                            {activeTrack.views}
+                          </span>
+                        )}
+                      </>
+                    ) : (
+                      <>
+                        <span className="px-2 py-0.5 bg-slate-900 text-slate-400 border border-slate-800 text-[10px] font-mono rounded">
+                          {activeMood ? activeMood.songRecommendation.genre : "Ambient Soundscape"}
+                        </span>
+                        <span className="px-2 py-0.5 bg-slate-900 text-slate-400 border border-slate-800 text-[10px] font-mono rounded">
+                          {activeMood ? `${activeMood.songRecommendation.tempo} BPM` : "80 BPM"}
+                        </span>
+                      </>
+                    )}
                   </div>
                 </div>
 
-                {/* Big play button */}
-                <button
-                  id="synth_audio_toggle"
-                  onClick={toggleSynthPlayback}
-                  className="w-12 h-12 rounded-xl flex items-center justify-center text-slate-950 hover:scale-[1.05] active:scale-[0.95] transition-all cursor-pointer shadow-lg"
-                  style={{
-                    backgroundColor: glowHex,
-                    boxShadow: `0 4px 15px ${glowHex}40`,
-                  }}
-                  title={isPlayingSynth ? "Pause Soundscape" : "Play Soundscape"}
-                >
-                  {isPlayingSynth ? (
-                    <Square className="w-5 h-5 text-slate-950 fill-slate-950" />
-                  ) : (
-                    <Play className="w-5 h-5 text-slate-950 fill-slate-950 ml-0.5" />
+                <div className="flex flex-col items-center gap-2 shrink-0">
+                  {/* Big play button */}
+                  <button
+                    id="synth_audio_toggle"
+                    onClick={toggleSynthPlayback}
+                    className="w-12 h-12 rounded-xl flex items-center justify-center text-slate-950 hover:scale-[1.05] active:scale-[0.95] transition-all cursor-pointer shadow-lg"
+                    style={{
+                      backgroundColor: glowHex,
+                      boxShadow: `0 4px 15px ${glowHex}40`,
+                    }}
+                    title={isPlayingSynth ? "Stop" : "Play"}
+                  >
+                    {isPlayingSynth ? (
+                      <Square className="w-5 h-5 text-slate-950 fill-slate-950" />
+                    ) : (
+                      <Play className="w-5 h-5 text-slate-950 fill-slate-950 ml-0.5" />
+                    )}
+                  </button>
+
+                  {/* Next real track in this mood */}
+                  {audioPlaybackType === 'youtube' && activeTrack && (
+                    <button
+                      onClick={() => {
+                        const mood = activeMood ? activeMood.mood : manualMood;
+                        const next = pickRealTrack(mood, activeTrack.videoId);
+                        if (next) {
+                          setActiveTrack(next);
+                          setActiveYoutubeUrl(next.youtubeUrl);
+                          setActiveYoutubeSearch(`${next.artist} - ${next.title}`);
+                        }
+                      }}
+                      className="px-2 py-1 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-600 text-[9px] font-mono text-slate-300 hover:text-white transition-all cursor-pointer"
+                      title="Skip to another track in this mood"
+                    >
+                      NEXT ▸
+                    </button>
                   )}
-                </button>
+                </div>
               </div>
 
-              {activeMood && (
+              {/* Audio plays via the hidden persistent YT player mounted once
+                  near the root (search for id="yt-audio-player"). No visible
+                  video by design — that's reserved for the future Tribe
+                  EEG-scan feature. */}
+
+              {audioPlaybackType === 'synth' && activeMood && (
                 <p className="text-[11px] text-slate-400 leading-relaxed mt-3 pt-3 border-t border-slate-800/60">
                   {activeMood.songRecommendation.description}
                 </p>
@@ -1852,6 +2003,15 @@ export default function App() {
 
         </div>
       </main>
+
+      {/* SONG CALIBRATION DETAIL POPOUT */}
+      {detailSong && (
+        <SongDetailModal
+          song={detailSong}
+          onClose={() => setDetailSong(null)}
+          onPlay={(song) => playSongFromLibrary(song)}
+        />
+      )}
 
       {/* DETAILED INFO / DOCUMENTATION MODAL */}
       {showInfoModal && (
